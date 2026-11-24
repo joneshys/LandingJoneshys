@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<!-- BORRADOR: NO PUBLICAR hasta que el abogado revise estos textos (Q2, Q3) y se rellenen TODOS los [MARCADORES]. Al publicar, quitar noindex solo si joneshys lo decide. -->
+<meta name="robots" content="noindex">
+<title>Revisión pasiva de presencia pública</title>
+<meta name="description" content="Qué es la revisión pasiva que hace Jose Miguel Benitez Rodriguez, qué mira exactamente, qué no hace y cómo pedir que no se vuelva a escribir a su empresa.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="pagina">
+  <header class="cabecera">
+    <p class="sitio"><a href="index.html">Revisión pasiva de presencia pública</a></p>
+    <p class="firma">Jose Miguel Benitez Rodriguez, Itagüí, Antioquia, Colombia</p>
+  </header>
+
+  <p class="borrador" role="note"><strong>Borrador.</strong> Texto pendiente de revisión legal. No lo publique ni lo enlace hasta completar los marcadores entre corchetes.</p>
+
+  <main>
+    <section class="portada inicio">
+      <h1>Qué miré en su sitio y qué no</h1>
+      <p class="lead">Si llegó aquí desde un mensaje mío o desde el registro de su servidor, esta página le explica quién soy, qué pedí exactamente a su sitio y cómo pedirme que no vuelva a escribirle.</p>
+      <p>Soy profesional independiente en cloud, DevSecOps y ciberseguridad. Reviso, una sola vez por empresa, información que cualquier visitante de internet ya recibe, y comparto algunas observaciones útiles, sin costo, con quien responda. No es una auditoría ni una certificación, y no garantiza que una empresa esté segura.</p>
+    </section>
+
+    <div class="doble">
+      <section class="bloque miro" aria-labelledby="miro-t">
+        <h2 id="miro-t">Lo que miré</h2>
+        <ul>
+          <li>La página principal: sus cabeceras de seguridad y si publica un contacto.</li>
+          <li>El certificado del sitio: su vigencia y quién lo emitió.</li>
+          <li>Que la dirección sin cifrar redirija a la cifrada.</li>
+          <li>Los registros públicos de DNS del dominio.</li>
+          <li>Los registros que protegen su correo contra la suplantación.</li>
+          <li>Si el sitio muestra la versión de su software: solo «sí» o «no», sin guardar cuál.</li>
+        </ul>
+      </section>
+      <section class="bloque nohago" aria-labelledby="no-t">
+        <h2 id="no-t">Lo que no hago</h2>
+        <ul>
+          <li>Iniciar sesión o usar credenciales.</li>
+          <li>Evadir ninguna protección, ni probar contraseñas o rutas ocultas.</li>
+          <li>Escanear puertos ni descargar archivos de su sitio.</li>
+          <li>Usar formularios, rastrear páginas o enviar correo de prueba a su servidor.</li>
+          <li>Guardar el contenido de sus páginas: solo anoto «bien», «mejorable» o «no aplica» por punto.</li>
+        </ul>
+        <p class="nota">Si por casualidad apareciera algo que no debería ser público, me detengo, no lo abro ni lo guardo, y no lo uso.</p>
+      </section>
+    </div>
+
+    <section aria-labelledby="registro-t">
+      <h2 id="registro-t">Lo que su servidor registró</h2>
+      <div class="registro">
+        <p>Estas son las peticiones, en este orden. Son las que haría un navegador y un resolvedor de DNS corrientes.</p>
+        <ul>
+          <li><b>GET http://su-dominio/</b><span>la página principal; si redirige a HTTPS, la sigo, hasta dos saltos dentro de su dominio</span></li>
+          <li><b>GET https://su-dominio/</b><span>cabeceras de seguridad y contacto publicado, en una sola respuesta</span></li>
+          <li><b>TLS, en esa misma conexión</b><span>vigencia y emisor del certificado; no pruebo versiones</span></li>
+          <li><b>DNS A, AAAA, MX, TXT, CAA, NS</b><span>registros públicos del dominio, por un resolvedor público</span></li>
+          <li><b>DNS TXT de _dmarc y _mta-sts</b><span>protección del correo contra la suplantación</span></li>
+        </ul>
+      </div>
+      <p class="nota">Una sola pasada, a ritmo lento y sin reintentos. Mis peticiones se identifican con mi nombre, esta dirección y mi correo de contacto, y salen de mi conexión de internet, sin ocultar el origen. Si su sitio responde con un bloqueo, paro.</p>
+    </section>
+
+    <section aria-labelledby="datos-t">
+      <h2 id="datos-t">Qué datos tengo y por cuánto tiempo</h2>
+      <p>Solo datos de contacto profesional de la empresa (por ejemplo, un correo genérico publicado en su sitio), el resultado de la revisión y, si responde, su respuesta. No vendo ni comparto estos datos. Los conservo [PLAZO] y los borro después, salvo que exista una queja o un requerimiento. Detalles en la <a href="politica.html">política de tratamiento de datos</a>.</p>
+    </section>
+
+    <section class="baja" aria-labelledby="baja-t">
+      <h2 id="baja-t">Pedir que no se vuelva a escribir a su empresa</h2>
+      <p>Escriba con el asunto «BAJA» e indique solo el dominio de su empresa. Lo atiendo de inmediato, anoto el dominio para no volver a escribir y borro el correo con el que me contactó.</p>
+      <a class="boton" href="mailto:infotouser@joneshys.com?subject=BAJA">Pedir la baja</a>
+      <p class="nota">También puede escribir a infotouser@joneshys.com para cualquier otra duda sobre esta revisión.</p>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p>Jose Miguel Benitez Rodriguez, Itagüí, Antioquia, Colombia</p>
+    <p><a href="mailto:infotouser@joneshys.com">infotouser@joneshys.com</a></p>
+    <p>Actualizado: [FECHA] · <a href="index.html">Ver servicios</a></p>
+  </footer>
+</div>
+</body>
+</html>

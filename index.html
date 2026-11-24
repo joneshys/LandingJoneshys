@@ -5,85 +5,112 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
-<!-- BORRADOR: NO PUBLICAR hasta que el abogado revise estos textos (Q2, Q3) y se rellenen TODOS los [MARCADORES]. Al publicar, quitar noindex solo si joneshys lo decide. -->
+<!-- BORRADOR COMERCIAL: noindex hasta que joneshys decida publicarla y Los Abelardos + Ciso aprueben los textos. CONFIRMAR: lista de servicios, tecnologías y correo de contacto. Sin precios, clientes ni testimonios inventados. -->
 <meta name="robots" content="noindex">
-<title>Revisión pasiva de presencia pública</title>
-<meta name="description" content="Qué es la revisión pasiva que hace Jose Miguel Benitez Rodriguez, qué mira exactamente, qué no hace y cómo pedir que no se vuelva a escribir a su empresa.">
+<title>Jose Benitez · Cloud, DevSecOps y ciberseguridad</title>
+<meta name="description" content="Servicios independientes de cloud, DevSecOps y ciberseguridad para empresas que quieren operar más seguro y entregar más rápido. Itagüí, Antioquia, Colombia.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="pagina">
   <header class="cabecera">
-    <p class="sitio">Revisión pasiva de presencia pública</p>
-    <p class="firma">Jose Miguel Benitez Rodriguez, Itagüí, Antioquia, Colombia</p>
+    <p class="sitio">Jose Benitez</p>
+    <nav class="menu" aria-label="Secciones">
+      <a href="#servicios">Servicios</a>
+      <a href="#metodo">Cómo trabajo</a>
+      <a href="#contacto" class="menu-cta">Contacto</a>
+    </nav>
   </header>
 
-  <p class="borrador" role="note"><strong>Borrador.</strong> Texto pendiente de revisión legal. No lo publique ni lo enlace hasta completar los marcadores entre corchetes.</p>
-
   <main>
-    <section class="portada inicio">
-      <h1>Qué miré en su sitio y qué no</h1>
-      <p class="lead">Si llegó aquí desde un mensaje mío o desde el registro de su servidor, esta página le explica quién soy, qué pedí exactamente a su sitio y cómo pedirme que no vuelva a escribirle.</p>
-      <p>Soy profesional independiente en cloud, DevSecOps y ciberseguridad. Reviso, una sola vez por empresa, información que cualquier visitante de internet ya recibe, y comparto algunas observaciones útiles, sin costo, con quien responda. No es una auditoría ni una certificación, y no garantiza que una empresa esté segura.</p>
-    </section>
-
-    <div class="doble">
-      <section class="bloque miro" aria-labelledby="miro-t">
-        <h2 id="miro-t">Lo que miré</h2>
-        <ul>
-          <li>La página principal: sus cabeceras de seguridad y si publica un contacto.</li>
-          <li>El certificado del sitio: su vigencia y quién lo emitió.</li>
-          <li>Que la dirección sin cifrar redirija a la cifrada.</li>
-          <li>Los registros públicos de DNS del dominio.</li>
-          <li>Los registros que protegen su correo contra la suplantación.</li>
-          <li>Si el sitio muestra la versión de su software: solo «sí» o «no», sin guardar cuál.</li>
-        </ul>
-      </section>
-      <section class="bloque nohago" aria-labelledby="no-t">
-        <h2 id="no-t">Lo que no hago</h2>
-        <ul>
-          <li>Iniciar sesión o usar credenciales.</li>
-          <li>Evadir ninguna protección, ni probar contraseñas o rutas ocultas.</li>
-          <li>Escanear puertos ni descargar archivos de su sitio.</li>
-          <li>Usar formularios, rastrear páginas o enviar correo de prueba a su servidor.</li>
-          <li>Guardar el contenido de sus páginas: solo anoto «bien», «mejorable» o «no aplica» por punto.</li>
-        </ul>
-        <p class="nota">Si por casualidad apareciera algo que no debería ser público, me detengo, no lo abro ni lo guardo, y no lo uso.</p>
-      </section>
-    </div>
-
-    <section aria-labelledby="registro-t">
-      <h2 id="registro-t">Lo que su servidor registró</h2>
-      <div class="registro">
-        <p>Estas son las peticiones, en este orden. Son las que haría un navegador y un resolvedor de DNS corrientes.</p>
-        <ul>
-          <li><b>GET http://su-dominio/</b><span>la página principal; si redirige a HTTPS, la sigo, hasta dos saltos dentro de su dominio</span></li>
-          <li><b>GET https://su-dominio/</b><span>cabeceras de seguridad y contacto publicado, en una sola respuesta</span></li>
-          <li><b>TLS, en esa misma conexión</b><span>vigencia y emisor del certificado; no pruebo versiones</span></li>
-          <li><b>DNS A, AAAA, MX, TXT, CAA, NS</b><span>registros públicos del dominio, por un resolvedor público</span></li>
-          <li><b>DNS TXT de _dmarc y _mta-sts</b><span>protección del correo contra la suplantación</span></li>
-        </ul>
+    <section class="portada hero">
+      <p class="etiqueta">Cloud · DevSecOps · Ciberseguridad</p>
+      <h1>Infraestructura más segura, entregas más rápidas.</h1>
+      <p class="lead">Ayudo a equipos de tecnología a ordenar su nube, automatizar sus despliegues y cerrar los huecos de seguridad que más pesan, con trabajo práctico y sin jerga.</p>
+      <div class="acciones">
+        <a class="boton" href="mailto:infotouser@joneshys.com?subject=Quiero%20conversar%20sobre%20servicios">Conversemos</a>
+        <a class="enlace-sec" href="#servicios">Ver servicios</a>
       </div>
-      <p class="nota">Una sola pasada, a ritmo lento y sin reintentos. Mis peticiones se identifican con mi nombre, esta dirección y mi correo de contacto, y salen de mi conexión de internet, sin ocultar el origen. Si su sitio responde con un bloqueo, paro.</p>
+      <ul class="datos-rapidos" aria-label="Datos clave">
+        <li><b>Independiente</b><span>trato directo con quien hace el trabajo</span></li>
+        <li><b>Itagüí, Antioquia</b><span>atención en Colombia y en remoto</span></li>
+        <li><b>Práctico</b><span>entregables claros y priorizados</span></li>
+      </ul>
     </section>
 
-    <section aria-labelledby="datos-t">
-      <h2 id="datos-t">Qué datos tengo y por cuánto tiempo</h2>
-      <p>Solo datos de contacto profesional de la empresa (por ejemplo, un correo genérico publicado en su sitio), el resultado de la revisión y, si responde, su respuesta. No vendo ni comparto estos datos. Los conservo [PLAZO] y los borro después, salvo que exista una queja o un requerimiento. Detalles en la <a href="politica.html">política de tratamiento de datos</a>.</p>
+    <section id="servicios" aria-labelledby="serv-t">
+      <h2 id="serv-t">Qué puedo hacer por su equipo</h2>
+      <p class="intro">Cuatro frentes que se pueden contratar por separado o combinar.</p>
+      <div class="servicios">
+        <article class="tarjeta">
+          <h3><span class="num">01</span> Cloud e infraestructura</h3>
+          <p>Diseño, orden y operación de su nube: redes, VPN, Kubernetes, observabilidad y control de costos.</p>
+          <ul>
+            <li>Arquitectura y buenas prácticas en la nube</li>
+            <li>Redes seguras, VPN y conectividad privada</li>
+            <li>Kubernetes y contenedores</li>
+            <li>Monitoreo, alarmas y costos</li>
+          </ul>
+        </article>
+        <article class="tarjeta">
+          <h3><span class="num">02</span> DevSecOps y pipelines</h3>
+          <p>Despliegues automáticos con la seguridad incorporada desde el primer commit, no al final.</p>
+          <ul>
+            <li>CI/CD y entrega continua</li>
+            <li>Detección de secretos y dependencias vulnerables</li>
+            <li>Revisión de infraestructura como código</li>
+            <li>Imágenes y contenedores más seguros</li>
+          </ul>
+        </article>
+        <article class="tarjeta">
+          <h3><span class="num">03</span> Seguridad de aplicaciones web</h3>
+          <p>Protección práctica de sitios y APIs expuestos a internet, con foco en lo que realmente se ataca.</p>
+          <ul>
+            <li>WAF, límites de tasa y bloqueo de bots</li>
+            <li>Cabeceras, TLS y configuración segura</li>
+            <li>Protección del correo contra la suplantación</li>
+            <li>Revisión de la superficie expuesta</li>
+          </ul>
+        </article>
+        <article class="tarjeta">
+          <h3><span class="num">04</span> Diagnóstico y acompañamiento</h3>
+          <p>Una mirada externa a su postura actual y un plan ordenado de qué arreglar primero.</p>
+          <ul>
+            <li>Diagnóstico de seguridad y de nube</li>
+            <li>Hallazgos priorizados por impacto</li>
+            <li>Plan de mejora por etapas</li>
+            <li>Apoyo a su equipo durante la ejecución</li>
+          </ul>
+        </article>
+      </div>
     </section>
 
-    <section class="baja" aria-labelledby="baja-t">
-      <h2 id="baja-t">Pedir que no se vuelva a escribir a su empresa</h2>
-      <p>Escriba con el asunto «BAJA» e indique solo el dominio de su empresa. Lo atiendo de inmediato, anoto el dominio para no volver a escribir y borro el correo con el que me contactó.</p>
-      <a class="boton" href="mailto:infotouser@joneshys.com?subject=BAJA">Pedir la baja</a>
-      <p class="nota">También puede escribir a infotouser@joneshys.com para cualquier otra duda sobre esta revisión.</p>
+    <section id="metodo" aria-labelledby="met-t">
+      <h2 id="met-t">Cómo trabajo</h2>
+      <ol class="pasos">
+        <li><b>Conversamos.</b><span>Me cuenta qué tiene, qué le preocupa y qué quiere lograr.</span></li>
+        <li><b>Diagnóstico.</b><span>Reviso lo necesario, con su autorización, y le entrego hallazgos claros y priorizados.</span></li>
+        <li><b>Plan.</b><span>Acordamos qué se hace primero, con alcance y tiempos por escrito.</span></li>
+        <li><b>Ejecución y traspaso.</b><span>Implemento o acompaño a su equipo y dejo todo documentado.</span></li>
+      </ol>
+      <p class="nota">Ningún servicio de seguridad garantiza que una empresa quede libre de riesgo. Mi trabajo es reducirlo de forma medible y explicarle con honestidad dónde está parado.</p>
+    </section>
+
+    <section class="confianza" aria-labelledby="conf-t">
+      <h2 id="conf-t">Trabajo dentro de lo permitido</h2>
+      <p>Solo reviso sistemas con autorización de su dueño. Cuando contacto a una empresa por iniciativa propia, me limito a información que cualquier visitante ya recibe, y lo explico con detalle en <a href="revision.html">qué miré y qué no</a>. Trato los datos personales según la <a href="politica.html">política de tratamiento de datos</a>.</p>
+    </section>
+
+    <section id="contacto" class="baja contacto" aria-labelledby="cont-t">
+      <h2 id="cont-t">¿Hablamos?</h2>
+      <p>Cuénteme en un par de líneas qué necesita. Le respondo personalmente.</p>
+      <a class="boton" href="mailto:infotouser@joneshys.com?subject=Quiero%20conversar%20sobre%20servicios">Escribir a infotouser@joneshys.com</a>
     </section>
   </main>
 
   <footer class="pie">
     <p>Jose Miguel Benitez Rodriguez, Itagüí, Antioquia, Colombia</p>
-    <p><a href="mailto:infotouser@joneshys.com">infotouser@joneshys.com</a></p>
-    <p>Actualizado: [FECHA]</p>
+    <p><a href="mailto:infotouser@joneshys.com">infotouser@joneshys.com</a> · <a href="revision.html">Revisión pasiva</a> · <a href="politica.html">Política de datos</a></p>
   </footer>
 </div>
 </body>
